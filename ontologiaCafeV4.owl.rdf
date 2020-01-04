@@ -1,0 +1,1995 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.coffee.com/ontologies/cafe.owl"
+     xml:base="http://www.coffee.com/ontologies/cafe.owl"
+     xmlns:cafe="http://www.coffee.com/ontologies/cafe.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.coffee.com/ontologies/cafe.owl">
+        <rdfs:comment>Ontología que describe varias bebidas de una tienda de café según sus bases y toppings</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#esBaseDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.coffee.com/ontologies/cafe.owl#esBaseDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+        <rdfs:domain rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Base"/>
+        <rdfs:range rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Bebida"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#esIngredienteDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.coffee.com/ontologies/cafe.owl#esIngredienteDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneIngrediente"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#esToppingDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.coffee.com/ontologies/cafe.owl#esToppingDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneTopping"/>
+        <rdfs:domain rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Topping"/>
+        <rdfs:range rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Bebida"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#tieneBase -->
+
+    <owl:ObjectProperty rdf:about="http://www.coffee.com/ontologies/cafe.owl#tieneBase">
+        <rdfs:subPropertyOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneIngrediente"/>
+        <rdfs:domain rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Bebida"/>
+        <rdfs:range rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Base"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#tieneCafeina -->
+
+    <owl:ObjectProperty rdf:about="http://www.coffee.com/ontologies/cafe.owl#tieneCafeina"/>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#tieneIngrediente -->
+
+    <owl:ObjectProperty rdf:about="http://www.coffee.com/ontologies/cafe.owl#tieneIngrediente">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#tieneTopping -->
+
+    <owl:ObjectProperty rdf:about="http://www.coffee.com/ontologies/cafe.owl#tieneTopping">
+        <rdfs:subPropertyOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneIngrediente"/>
+        <rdfs:domain rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Bebida"/>
+        <rdfs:range rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Topping"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#tienePrecio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.coffee.com/ontologies/cafe.owl#tienePrecio">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#Agua -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#Agua">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Base"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#AguaCaliente -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#AguaCaliente">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Agua"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#AguaFria -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#AguaFria">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Agua"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#Algarrobina -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#Algarrobina">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Jarabe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#AlgarrobinaCremaFrapuccino -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#AlgarrobinaCremaFrapuccino">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Frapuccino"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#AguaFria"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Algarrobina"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#BaseCrema"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#LecheLiquida"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#AlgarrobinaTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#ChocolateChispas"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#CremaBatida"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.coffee.com/ontologies/cafe.owl#HieloEnCubos"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#AlgarrobinaFrapuccino -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#AlgarrobinaFrapuccino">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Frapuccino"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#AguaFria"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Algarrobina"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#LecheLiquida"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#AlgarrobinaTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#ChocolateChispas"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#CremaBatida"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.coffee.com/ontologies/cafe.owl#HieloEnCubos"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#AlgarrobinaTopping -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#AlgarrobinaTopping">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Topping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#Alta -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#Alta">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#CafeinaValuePartition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#Americano -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#Americano">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#BebidaIdentificada"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#AguaCaliente"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#AguaCaliente"/>
+                            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#Espresso"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Espresso"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#Azucar -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#Azucar">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Endulzante"/>
+        <owl:disjointWith rdf:resource="http://www.coffee.com/ontologies/cafe.owl#ManjarBlanco"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#Base -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#Base"/>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#BaseCrema -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#BaseCrema">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Jarabe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#Bebida -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#Bebida">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Base"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#BebidaBarata -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#BebidaBarata">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#Bebida"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tienePrecio"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">10.0</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://www.coffee.com/ontologies/cafe.owl#BebidaCara"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#BebidaCaliente -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#BebidaCaliente">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#Bebida"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#AguaCaliente"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#LecheAlVapor"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://www.coffee.com/ontologies/cafe.owl#BebidaFria"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#BebidaCara -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#BebidaCara">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#Bebida"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tienePrecio"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">10.0</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#BebidaDulce -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#BebidaDulce">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#Bebida"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Endulzante"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Jarabe"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#BebidaFria -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#BebidaFria">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#Bebida"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#Helado"/>
+                                    <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#HieloEnCubos"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#BebidaIdentificada -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#BebidaIdentificada">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Bebida"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#Bonbon -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#Bonbon">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#BebidaIdentificada"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Espresso"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#LecheCondensada"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#Cafe -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#Cafe">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Base"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#CafeAuLait -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#CafeAuLait">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#BebidaIdentificada"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#LecheAlVapor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#EspumaDeLeche"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.coffee.com/ontologies/cafe.owl#EspressoConcentrado"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#CafeConHielo -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#CafeConHielo">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#BebidaIdentificada"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Espresso"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#Espresso"/>
+                            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#HieloEnCubos"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.coffee.com/ontologies/cafe.owl#HieloEnCubos"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#CafeConLeche -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#CafeConLeche">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#BebidaIdentificada"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#CafeFiltrado"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#LecheAlVapor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#CafeEspresso -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#CafeEspresso">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#BebidaIdentificada"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:allValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Espresso"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Espresso"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#CafeExtraIntenso -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#CafeExtraIntenso">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#Bebida"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#Base"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneCafeina"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#MuyAlta"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#CafeFiltrado -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#CafeFiltrado">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Cafe"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneCafeina"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Media"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#CafeFrapuccino -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#CafeFrapuccino">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Frapuccino"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#AguaFria"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Azucar"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#CafeFiltrado"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#LecheLiquida"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.coffee.com/ontologies/cafe.owl#HieloEnCubos"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#CafeGranulado -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#CafeGranulado">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Cafe"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneCafeina"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#MuyAlta"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#CafeIntenso -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#CafeIntenso">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#Bebida"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#Base"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneCafeina"/>
+                                                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Alta"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
+                                <owl:onClass rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Cafe"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#CafeLatte -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#CafeLatte">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#BebidaIdentificada"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#LecheAlVapor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#EspumaDeLeche"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Espresso"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#CafePuro -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#CafePuro">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#Bebida"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#Agua"/>
+                                    <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#Cafe"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#CafeSuave -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#CafeSuave">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#Bebida"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#Base"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneCafeina"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Media"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#CafeinaValuePartition -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#CafeinaValuePartition">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#ValuePartition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#CanelaEnPolvo -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#CanelaEnPolvo">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Topping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#Capuccino -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#Capuccino">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#BebidaIdentificada"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Espresso"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#LecheAlVapor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#CanelaEnPolvo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#ChocolatePolvo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#EspumaDeLeche"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#Caramelo -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#Caramelo">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Jarabe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#CarameloFrapuccino -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#CarameloFrapuccino">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Frapuccino"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#AguaFria"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#CafeFiltrado"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Caramelo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#LecheLiquida"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#CarameloTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#CremaBatida"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.coffee.com/ontologies/cafe.owl#HieloEnCubos"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#CarameloTopping -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#CarameloTopping">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Topping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#Chocolate -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#Chocolate">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Base"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#ChocolateBlanco -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#ChocolateBlanco">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Chocolate"/>
+        <owl:disjointWith rdf:resource="http://www.coffee.com/ontologies/cafe.owl#ChocolateNegro"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#ChocolateCaliente -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#ChocolateCaliente">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#BebidaIdentificada"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#AguaCaliente"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#ChocolateNegro"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#LecheAlVapor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#LecheLiquida"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#ChocolateChispas -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#ChocolateChispas">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#ChocolateTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#ChocolateMocha -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#ChocolateMocha">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#ChocolateTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#ChocolateNegro -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#ChocolateNegro">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Chocolate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#ChocolatePolvo -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#ChocolatePolvo">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#ChocolateTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#ChocolateTopping -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#ChocolateTopping">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Topping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#ContieneChocolate -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#ContieneChocolate">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#Bebida"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Chocolate"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneTopping"/>
+                                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#ChocolateTopping"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#ContieneLeche -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#ContieneLeche">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#Bebida"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Leche"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneTopping"/>
+                                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#EspumaDeLeche"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#Cortado -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#Cortado">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#BebidaIdentificada"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Espresso"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#LecheLiquida"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#CremaBatida -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#CremaBatida">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Topping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#Doppio -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#Doppio">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#BebidaIdentificada"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:allValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Espresso"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Espresso"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#Endulzante -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#Endulzante">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Base"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#Espresso -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#Espresso">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Cafe"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneCafeina"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Alta"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#EspressoConcentrado -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#EspressoConcentrado">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Cafe"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneCafeina"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#MuyAlta"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#EspressoFrapuccino -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#EspressoFrapuccino">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Frapuccino"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#AguaFria"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Azucar"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Espresso"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#LecheLiquida"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.coffee.com/ontologies/cafe.owl#HieloEnCubos"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#EspumaDeLeche -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#EspumaDeLeche">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Topping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#Frapuccino -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#Frapuccino">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#BebidaIdentificada"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#Helado -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#Helado">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Base"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#HieloEnCubos -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#HieloEnCubos">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Agua"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#Jarabe -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#Jarabe">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Base"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#Leche -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#Leche">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Base"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#LecheAlVapor -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#LecheAlVapor">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Leche"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#LecheCondensada -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#LecheCondensada">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Leche"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#LecheLiquida -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#LecheLiquida">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Leche"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#LongBlack -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#LongBlack">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#BebidaIdentificada"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#AguaCaliente"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#AguaCaliente"/>
+                            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#Espresso"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Espresso"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#Macchiato -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#Macchiato">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#BebidaIdentificada"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Espresso"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#EspumaDeLeche"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#MacchiatoCaramelo -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#MacchiatoCaramelo">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#BebidaIdentificada"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Espresso"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Vainilla"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#CarameloTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#EspumaDeLeche"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#ManjarBlanco -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#ManjarBlanco">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Endulzante"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#ManjarBlancoCremaFrapuccino -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#ManjarBlancoCremaFrapuccino">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Frapuccino"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#AguaFria"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#LecheLiquida"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#ManjarBlanco"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#CarameloTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#CremaBatida"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.coffee.com/ontologies/cafe.owl#HieloEnCubos"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#Media -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#Media">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#CafeinaValuePartition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#Mocha -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#Mocha">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#BebidaIdentificada"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#ChocolateNegro"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Espresso"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#LecheAlVapor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#ChocolatePolvo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#EspumaDeLeche"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#MochaBlanco -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#MochaBlanco">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#BebidaIdentificada"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#ChocolateBlanco"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Espresso"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#LecheAlVapor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#ChocolatePolvo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#CremaBatida"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#MochaBlancoFrapuccino -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#MochaBlancoFrapuccino">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Frapuccino"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#AguaFria"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#CafeFiltrado"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#ChocolateBlanco"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#LecheLiquida"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#CremaBatida"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.coffee.com/ontologies/cafe.owl#HieloEnCubos"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#MochaFrapuccino -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#MochaFrapuccino">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Frapuccino"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#AguaFria"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#CafeFiltrado"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#ChocolateNegro"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#LecheLiquida"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#ChocolateMocha"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#CremaBatida"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.coffee.com/ontologies/cafe.owl#HieloEnCubos"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#MuyAlta -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#MuyAlta">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#CafeinaValuePartition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#PiccoloLatte -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#PiccoloLatte">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#BebidaIdentificada"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#LecheAlVapor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#EspumaDeLeche"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Espresso"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#Ristretto -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#Ristretto">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#BebidaIdentificada"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:allValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#EspressoConcentrado"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.coffee.com/ontologies/cafe.owl#EspressoConcentrado"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#Tinto -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#Tinto">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#BebidaIdentificada"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:allValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#CafeFiltrado"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.coffee.com/ontologies/cafe.owl#CafeFiltrado"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#Topping -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#Topping"/>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#Turco -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#Turco">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#BebidaIdentificada"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#AguaCaliente"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#CafeGranulado"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#AguaCaliente"/>
+                            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#CafeGranulado"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#Vainilla -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#Vainilla">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Jarabe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#VainillaCremaFrapuccino -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#VainillaCremaFrapuccino">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Frapuccino"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#AguaFria"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#LecheLiquida"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Vainilla"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#CremaBatida"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.coffee.com/ontologies/cafe.owl#HieloEnCubos"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#VainillaLatte -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#VainillaLatte">
+        <rdfs:subClassOf rdf:resource="http://www.coffee.com/ontologies/cafe.owl#BebidaIdentificada"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#LecheAlVapor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Vainilla"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.coffee.com/ontologies/cafe.owl#EspumaDeLeche"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.coffee.com/ontologies/cafe.owl#tieneBase"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Espresso"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#ValuePartition -->
+
+    <owl:Class rdf:about="http://www.coffee.com/ontologies/cafe.owl#ValuePartition"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#ejemploAlgarrobinaFrapuccino -->
+
+    <owl:NamedIndividual rdf:about="http://www.coffee.com/ontologies/cafe.owl#ejemploAlgarrobinaFrapuccino">
+        <rdf:type rdf:resource="http://www.coffee.com/ontologies/cafe.owl#AlgarrobinaFrapuccino"/>
+        <cafe:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#double">13.5</cafe:tienePrecio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#ejemploAmericano -->
+
+    <owl:NamedIndividual rdf:about="http://www.coffee.com/ontologies/cafe.owl#ejemploAmericano">
+        <rdf:type rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Americano"/>
+        <cafe:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#double">7.5</cafe:tienePrecio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#ejemploCafeEspresso -->
+
+    <owl:NamedIndividual rdf:about="http://www.coffee.com/ontologies/cafe.owl#ejemploCafeEspresso">
+        <rdf:type rdf:resource="http://www.coffee.com/ontologies/cafe.owl#CafeEspresso"/>
+        <cafe:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#double">5.0</cafe:tienePrecio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#ejemploCafeFrapuccino -->
+
+    <owl:NamedIndividual rdf:about="http://www.coffee.com/ontologies/cafe.owl#ejemploCafeFrapuccino">
+        <rdf:type rdf:resource="http://www.coffee.com/ontologies/cafe.owl#CafeFrapuccino"/>
+        <cafe:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#double">10.0</cafe:tienePrecio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#ejemploMocha -->
+
+    <owl:NamedIndividual rdf:about="http://www.coffee.com/ontologies/cafe.owl#ejemploMocha">
+        <rdf:type rdf:resource="http://www.coffee.com/ontologies/cafe.owl#Mocha"/>
+        <cafe:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#double">11.5</cafe:tienePrecio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.coffee.com/ontologies/cafe.owl#ejemploMochaBlanco -->
+
+    <owl:NamedIndividual rdf:about="http://www.coffee.com/ontologies/cafe.owl#ejemploMochaBlanco">
+        <rdf:type rdf:resource="http://www.coffee.com/ontologies/cafe.owl#MochaBlanco"/>
+        <cafe:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#double">11.5</cafe:tienePrecio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#Agua"/>
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#Cafe"/>
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#Chocolate"/>
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#Endulzante"/>
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#Helado"/>
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#Jarabe"/>
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#Leche"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#AguaCaliente"/>
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#AguaFria"/>
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#HieloEnCubos"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#Algarrobina"/>
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#BaseCrema"/>
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#Caramelo"/>
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#Vainilla"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#AlgarrobinaTopping"/>
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#CanelaEnPolvo"/>
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#CarameloTopping"/>
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#ChocolateTopping"/>
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#CremaBatida"/>
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#EspumaDeLeche"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#Alta"/>
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#Media"/>
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#MuyAlta"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#Base"/>
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#Bebida"/>
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#Topping"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#CafeConLeche"/>
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#CafeLatte"/>
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#PiccoloLatte"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#CafeExtraIntenso"/>
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#CafeIntenso"/>
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#CafeSuave"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#CafeFiltrado"/>
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#CafeGranulado"/>
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#Espresso"/>
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#EspressoConcentrado"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#CanelaEnPolvo"/>
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#ChocolateTopping"/>
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#EspumaDeLeche"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#ChocolateChispas"/>
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#ChocolateMocha"/>
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#ChocolatePolvo"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#LecheAlVapor"/>
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#LecheCondensada"/>
+            <rdf:Description rdf:about="http://www.coffee.com/ontologies/cafe.owl#LecheLiquida"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
